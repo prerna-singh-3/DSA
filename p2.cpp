@@ -10,7 +10,9 @@ f. 80 to 100 - A
 Ask user to enter marks and print the corresponding grade.
 */
 
-#include <iostream>
+// Using if takes a lot of space and time as it executes every command even though the first command itself is applicable.
+
+/*#include <iostream>
 using namespace std;
 
 int main()
@@ -40,6 +42,44 @@ int main()
         cout << "B";
     }
     if (marks >= 80 && marks <= 100)
+    {
+        cout << "A";
+    }
+    return 0;
+}*/
+
+// We use else-if which saves time and is a more effective approach to solve the problem
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    int marks;
+    cin >> marks;
+    if (marks < 25)
+    {
+        cout << "F";
+    }
+    else if (marks <= 44)   // we don't write the initial operation because in the first statement itself it has been mentioned which means that if the first statement is false it will automatically include that and move to the next operation and hence we don't have to re-write it!
+    {
+        cout << "E";
+    }
+    else if (marks <= 49)
+    {
+        cout << "D";
+    }
+    else if (marks <= 59)
+    {
+        cout << "C";
+    }
+    else if (marks <= 79)
+    {
+        cout << "B";
+    }
+    else if (marks <= 100)
     {
         cout << "A";
     }
